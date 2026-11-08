@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Chùa Dân Tộc Sóc Trăng</title>
+    <style>
+        /* Hiệu ứng cuộn lướt trang mượt mà */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Thanh Menu cố định ở đầu trang giống trang mẫu */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d35400; /* Đổi màu khi di chuột vào */
+        }
+        /* Khu vực Banner đầu trang */
+        .banner {
+            margin-top: 55px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .banner h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+        /* Định dạng các phần nội dung */
+        section {
+            padding: 90px 20px 60px 20px; /* Padding top lớn để khi cuộn xuống không bị menu che khuất tiêu đề */
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #d35400;
+            font-size: 28px;
+            border-bottom: 2px solid #d35400;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        /* Bố cục danh sách các chùa */
+        .chua-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .chua-card {
+            background: #fcfcfc;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+        }
+.chua-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .chua-card h3 {
+            color: #2c3e50;
+            margin: 15px 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- THANH MENU ĐIỀU HƯỚNG CHÍNH -->
+    <header>
+        <nav>
+            <a href="#trang-chu">Trang chủ</a>
+            <a href="#gioi-thieu">Giới thiệu</a>
+        </nav>
+    </header>
+
+    <!-- PHẦN ĐẦU TRANG: TRANG CHỦ -->
+    <section id="trang-chu">
+        <div class="banner">
+            <h1>GIỚI THIỆU CÁC CHÙA DÂN TỘC SÓC TRĂNG</h1>
+            <p>Khám phá nét đẹp kiến trúc và văn hóa tâm linh độc đáo của 3 dân tộc Kinh - Hoa - Khmer</p>
+        </div>
+    </section>
+
+    <!-- PHẦN NỘI DUNG: GIỚI THIỆU (Bấm menu Giới thiệu sẽ tự lướt cuộn xuống đây) -->
+    <section id="gioi-thieu">
+        <div class="container">
+            <h2>GÓC GIỚI THIỆU: 3 NGÔI CHÙA TIÊU BIỂU ĐẠI DIỆN CHO 3 DÂN TỘC</h2>
+            <p>Sóc Trăng là vùng đất giao thoa văn hóa đặc sắc. Dưới đây là những ngôi chùa nổi tiếng mà bạn không thể bỏ qua:</p>
+            
+            <div class="chua-grid">
+                <!-- Chùa 1 -->
+                <div class="chua-card">
+                    <img src="https://picsum.photos" alt="Chùa Khmer">
+                    <h3>1. Chùa Dơi (Mã Tộc)</h3>
+                    <p>Ngôi chùa cổ kính của người Khmer với kiến trúc Angkor độc đáo và là nơi trú ngụ của hàng ngàn con dơi tự nhiên.</p>
+                </div>
+
+                <!-- Chùa 2 -->
+                <div class="chua-card">
+                    <img src="https://picsum.photos" alt="Chùa Hoa">
+                    <h3>2. Chùa Ông Bổn (Hòa An Hội Quán)</h3>
+                    <p>Ngôi chùa mang đậm phong cách kiến trúc của người Hoa với những bức tượng điêu khắc tinh xảo và sắc đỏ may mắn.</p>
+                </div>
+
+                <!-- Chùa 3 -->
+                <div class="chua-card">
+                    <img src="https://picsum.photos" alt="Chùa Kinh">
+                    <h3>3. Chùa Đất Sét (Bửu Sơn Tự)</h3>
+                    <p>Ngôi chùa nổi tiếng của người Kinh sở hữu hàng ngàn bức tượng làm hoàn toàn bằng đất sét và những cặp cây nến khổng lồ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
