@@ -46,23 +46,23 @@
         }
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 20px;
         }
         .nav-links a {
             color: #475569;
             text-decoration: none;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             transition: color 0.2s;
         }
         .nav-links a:hover {
             color: #d97706;
         }
-        /* Banner chính xịn sò */
+        /* Banner chính */
         .banner {
             margin-top: 55px;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://unsplash.com') no-repeat center center/cover;
-            height: 500px;
+            height: 450px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -72,75 +72,112 @@
             padding: 0 20px;
         }
         .banner h1 {
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 800;
             margin-bottom: 15px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-            letter-spacing: -0.5px;
         }
         .banner p {
-            font-size: 18px;
+            font-size: 16px;
             max-width: 600px;
             opacity: 0.9;
         }
-        /* Định dạng các phần nội dung */
+        /* Định dạng các phần nội dung tổng thể */
         section {
-            padding: 100px 20px 60px 20px;
+            padding: 90px 20px 40px 20px;
             max-width: 1100px;
             margin: 0 auto;
         }
+        .container {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
-        }
+            margin-bottom: 30px;
+}
         .section-title h2 {
             color: #1e293b;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
-margin-bottom: 10px;
+            margin-bottom: 10px;
         }
         .section-title .divider {
-            width: 60px;
+            width: 50px;
             height: 4px;
             background: #d97706;
             margin: 0 auto;
             border-radius: 2px;
         }
-        /* Bố cục danh sách các chùa đổ bóng mượt mà */
+        /* Grid danh sách các chùa */
         .chua-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
         .chua-card {
-            background: #ffffff;
-            border-radius: 12px;
+            background: #f8fafc;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
         }
         .chua-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .chua-card img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
         }
         .chua-content {
-            padding: 25px;
+            padding: 20px;
         }
-        .chua-content h3 {
-            color: #0f172a;
-            margin: 0 0 12px 0;
-            font-size: 20px;
-            font-weight: 700;
+        /* Biểu mẫu đăng nhập xịn */
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
         }
-        .chua-content p {
-            color: #64748b;
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        .login-btn {
+            background: #d97706;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
             font-size: 15px;
-            margin: 0;
+        }
+        .login-btn:hover {
+            background: #b45309;
+        }
+        /* Footer thông tin trường học */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -153,54 +190,90 @@ margin-bottom: 10px;
             <div class="nav-links">
                 <a href="#trang-chu">Trang chủ</a>
                 <a href="#gioi-thieu">Giới thiệu</a>
+                <a href="#lich-su">Lịch sử</a>
+                <a href="#kien-truc">Kiến trúc</a>
+                <a href="#tac-gia">Tác giả</a>
+                <a href="#dang-nhap">Đăng nhập</a>
             </div>
         </nav>
     </header>
 
-    <!-- PHẦN ĐẦU TRANG: TRANG CHỦ -->
+    <!-- PHẦN 1: TRANG CHỦ -->
     <section id="trang-chu" style="padding-top: 0; max-width: 100%; padding-left: 0; padding-right: 0;">
         <div class="banner">
-            <h1>DI SẢN VĂN HÓA CÁC NGÔI CHÙA</h1>
-            <p>Khám phá nét đẹp kiến trúc độc đáo và sự giao thoa văn hóa tâm linh đặc sắc của các dân tộc tại mảnh đất Sóc Trăng thân thương.</p>
+            <h1>DI SẢN VĂN HÓA CÁC NGÔI CHÙA SÓC TRĂNG</h1>
+<p>Khám phá nét đẹp văn hóa tâm linh và sự giao thoa đặc sắc của các dân tộc tại mảnh đất Sóc Trăng thân thương.</p>
         </div>
     </section>
 
-    <!-- PHẦN NỘI DUNG: GIỚI THIỆU -->
+    <!-- PHẦN 2: GIỚI THIỆU -->
     <section id="gioi-thieu">
-        <div class="section-title">
-            <h2>Các Ngôi Chùa Tiêu Biểu</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="chua-grid">
-            <!-- Chùa 1 -->
-            <div class="chua-card">
-                <img src="https://unsplash.com" alt="Chùa Khmer">
-                <div class="chua-content">
-                    <h3>1. Chùa Dơi (Mã Tộc)</h3>
-                    <p>Ngôi chùa cổ kính của người Khmer sở hữu lối kiến trúc Angkor đặc sắc, nổi tiếng là nơi trú ngụ độc đáo của hàng ngàn chú dơi tự nhiên.</p>
-                </div>
+        <div class="container">
+            <div class="section-title">
+                <h2>Các Ngôi Chùa Tiêu Biểu</h2>
+                <div class="divider"></div>
             </div>
-
-            <!-- Chùa 2 -->
-            <div class="chua-card">
-<img src="https://unsplash.com" alt="Chùa Hoa">
-                <div class="chua-content">
-                    <h3>2. Chùa Ông Bổn</h3>
-                    <p>Mang đậm dấu ấn văn hóa kiến trúc phong cách Trung Hoa cổ điển với những bức tượng điêu khắc tinh xảo và sắc đỏ may mắn ngập tràn.</p>
+            
+            <div class="chua-grid">
+                <div class="chua-card">
+                    <img src="https://unsplash.com" alt="Chùa Khmer">
+                    <div class="chua-content">
+                        <h3>1. Chùa Dơi (Mã Tộc)</h3>
+                        <p>Ngôi chùa cổ kính của người Khmer sở hữu lối kiến trúc Angkor đặc sắc, nổi tiếng là nơi trú ngụ độc đáo của hàng ngàn chú dơi tự nhiên.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Chùa 3 -->
-            <div class="chua-card">
-                <img src="https://unsplash.com" alt="Chùa Kinh">
-                <div class="chua-content">
-                    <h3>3. Chùa Đất Sét (Bửu Sơn Tự)</h3>
-                    <p>Ngôi chùa linh thiêng mang bản sắc văn hóa người Kinh, nổi danh với hàng ngàn bức tượng tạo tác hoàn toàn bằng đất sét cùng những cặp nến khổng lồ cháy suốt trăm năm.</p>
+                <div class="chua-card">
+                    <img src="https://unsplash.com" alt="Chùa Hoa">
+                    <div class="chua-content">
+                        <h3>2. Chùa Ông Bổn</h3>
+                        <p>Mang đậm dấu ấn văn hóa kiến trúc phong cách Trung Hoa cổ điển với những bức tượng điêu khắc tinh xảo và sắc đỏ may mắn ngập tràn.</p>
+                    </div>
+                </div>
+
+                <div class="chua-card">
+                    <img src="https://unsplash.com" alt="Chùa Kinh">
+                    <div class="chua-content">
+                        <h3>3. Chùa Đất Sét</h3>
+                        <p>Ngôi chùa linh thiêng mang bản sắc văn hóa người Kinh, nổi danh với hàng ngàn bức tượng bằng đất sét cùng những cặp nến khổng lồ.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-</body>
-</html>
+    <!-- PHẦN 3: LỊCH SỬ -->
+    <section id="lich-su">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lịch Sử Hình Thành</h2>
+                <div class="divider"></div>
+            </div>
+            <p>Các ngôi chùa tại Sóc Trăng có lịch sử kéo dài hàng trăm năm, gắn liền với quá trình khai hoang và lập nghiệp của 3 dân tộc Kinh - Hoa - Khmer. Mỗi ngôi chùa không chỉ là nơi sinh hoạt tâm linh mà còn là chứng nhân lịch sử ghi dấu sự hòa hợp, đoàn kết hữu nghị giữa các cộng đồng dân cư qua nhiều thời kỳ phát triển của vùng đất Nam Bộ.</p>
+        </div>
+    </section>
+
+    <!-- PHẦN 4: KIẾN TRÚC -->
+    <section id="kien-truc">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nét Đẹp Kiến Trúc Độc Đáo</h2>
+                <div class="divider"></div>
+            </div>
+<p>Sự độc đáo trong kiến trúc chùa miếu Sóc Trăng thể hiện rõ qua bàn tay khéo léo của các nghệ nhân:</p>
+            <ul>
+                <li><strong>Chùa Khmer:</strong> Nổi bật với mái cong vút hình đuôi rồng, các tượng thần Krud, Bayon và hoa văn tinh xảo đậm nét Angkor.</li>
+                <li><strong>Chùa Hoa:</strong> Mang kiến trúc lợp ngói âm dương, các cột gỗ sơn son thếp vàng, chạm khắc câu đối chữ Hán và biểu tượng kỳ lân, long phụng.</li>
+                <li><strong>Chùa Kinh:</strong> Thể hiện sự thuần việt mộc mạc, gần gũi với thiên nhiên, các gian thờ bố trí hài hòa trang nghiêm theo Phật giáo Bắc tông.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PHẦN 5: TÁC GIẢ -->
+    <section id="tac-gia">
+        <div class="container" style="text-align: center;">
+            <div class="section-title">
+                <h2>Thông Tin Tác Giả</h2>
+                <div class="divider"></div>
+            </div>
+            <p style="font-weight: bold; font-size: 18px; color: #0f172a;">Nhóm Học Sinh Thực Hiện Dự Án</p>
