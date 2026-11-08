@@ -3,51 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu Chùa Dân Tộc Sóc Trăng</title>
+    <title>Chùa Sóc Trăng — Di sản văn hóa dân tộc</title>
     <style>
         /* Hiệu ứng cuộn lướt trang mượt mà */
         html {
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
+            line-height: 1.7;
+            background-color: #f8fafc;
+            color: #1e293b;
         }
-        /* Thanh Menu cố định ở đầu trang giống trang mẫu */
+        /* Thanh Menu cố định chuẩn hiện đại */
         header {
-            background: #ffffff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
+            border-bottom: 1px solid #f1f5f9;
         }
         nav {
             display: flex;
-            justify-content: center;
-            padding: 15px 0;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 20px;
         }
-        nav a {
-            color: #333;
+        .logo {
+            font-weight: 700;
+            font-size: 18px;
+            color: #d97706;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: #475569;
             text-decoration: none;
-            margin: 0 25px;
             font-weight: 600;
-            font-size: 16px;
-            transition: color 0.3s;
+            font-size: 15px;
+            transition: color 0.2s;
         }
-        nav a:hover {
-            color: #d35400; /* Đổi màu khi di chuột vào */
+        .nav-links a:hover {
+            color: #d97706;
         }
-        /* Khu vực Banner đầu trang */
+        /* Banner chính xịn sò */
         .banner {
             margin-top: 55px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos') no-repeat center center/cover;
-            height: 450px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -57,52 +72,75 @@
             padding: 0 20px;
         }
         .banner h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            letter-spacing: -0.5px;
+        }
+        .banner p {
+            font-size: 18px;
+            max-width: 600px;
+            opacity: 0.9;
         }
         /* Định dạng các phần nội dung */
         section {
-            padding: 90px 20px 60px 20px; /* Padding top lớn để khi cuộn xuống không bị menu che khuất tiêu đề */
-            max-width: 1000px;
+            padding: 100px 20px 60px 20px;
+            max-width: 1100px;
             margin: 0 auto;
         }
-        .container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
         }
-        h2 {
-            color: #d35400;
-            font-size: 28px;
-            border-bottom: 2px solid #d35400;
-            padding-bottom: 10px;
-            margin-top: 0;
+        .section-title h2 {
+            color: #1e293b;
+            font-size: 32px;
+            font-weight: 700;
+margin-bottom: 10px;
         }
-        /* Bố cục danh sách các chùa */
+        .section-title .divider {
+            width: 60px;
+            height: 4px;
+            background: #d97706;
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+        /* Bố cục danh sách các chùa đổ bóng mượt mà */
         .chua-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
         .chua-card {
-            background: #fcfcfc;
-            border: 1px solid #eee;
-            border-radius: 6px;
-            padding: 15px;
-            text-align: center;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-.chua-card img {
+        .chua-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .chua-card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
-            border-radius: 4px;
         }
-        .chua-card h3 {
-            color: #2c3e50;
-            margin: 15px 0 10px 0;
+        .chua-content {
+            padding: 25px;
+        }
+        .chua-content h3 {
+            color: #0f172a;
+            margin: 0 0 12px 0;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .chua-content p {
+            color: #64748b;
+            font-size: 15px;
+            margin: 0;
         }
     </style>
 </head>
@@ -111,45 +149,54 @@
     <!-- THANH MENU ĐIỀU HƯỚNG CHÍNH -->
     <header>
         <nav>
-            <a href="#trang-chu">Trang chủ</a>
-            <a href="#gioi-thieu">Giới thiệu</a>
+            <div class="logo">Chùa Sóc Trăng</div>
+            <div class="nav-links">
+                <a href="#trang-chu">Trang chủ</a>
+                <a href="#gioi-thieu">Giới thiệu</a>
+            </div>
         </nav>
     </header>
 
     <!-- PHẦN ĐẦU TRANG: TRANG CHỦ -->
-    <section id="trang-chu">
+    <section id="trang-chu" style="padding-top: 0; max-width: 100%; padding-left: 0; padding-right: 0;">
         <div class="banner">
-            <h1>GIỚI THIỆU CÁC CHÙA DÂN TỘC SÓC TRĂNG</h1>
-            <p>Khám phá nét đẹp kiến trúc và văn hóa tâm linh độc đáo của 3 dân tộc Kinh - Hoa - Khmer</p>
+            <h1>DI SẢN VĂN HÓA CÁC NGÔI CHÙA</h1>
+            <p>Khám phá nét đẹp kiến trúc độc đáo và sự giao thoa văn hóa tâm linh đặc sắc của các dân tộc tại mảnh đất Sóc Trăng thân thương.</p>
         </div>
     </section>
 
-    <!-- PHẦN NỘI DUNG: GIỚI THIỆU (Bấm menu Giới thiệu sẽ tự lướt cuộn xuống đây) -->
+    <!-- PHẦN NỘI DUNG: GIỚI THIỆU -->
     <section id="gioi-thieu">
-        <div class="container">
-            <h2>GÓC GIỚI THIỆU: 3 NGÔI CHÙA TIÊU BIỂU ĐẠI DIỆN CHO 3 DÂN TỘC</h2>
-            <p>Sóc Trăng là vùng đất giao thoa văn hóa đặc sắc. Dưới đây là những ngôi chùa nổi tiếng mà bạn không thể bỏ qua:</p>
-            
-            <div class="chua-grid">
-                <!-- Chùa 1 -->
-                <div class="chua-card">
-                    <img src="https://picsum.photos" alt="Chùa Khmer">
+        <div class="section-title">
+            <h2>Các Ngôi Chùa Tiêu Biểu</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="chua-grid">
+            <!-- Chùa 1 -->
+            <div class="chua-card">
+                <img src="https://unsplash.com" alt="Chùa Khmer">
+                <div class="chua-content">
                     <h3>1. Chùa Dơi (Mã Tộc)</h3>
-                    <p>Ngôi chùa cổ kính của người Khmer với kiến trúc Angkor độc đáo và là nơi trú ngụ của hàng ngàn con dơi tự nhiên.</p>
+                    <p>Ngôi chùa cổ kính của người Khmer sở hữu lối kiến trúc Angkor đặc sắc, nổi tiếng là nơi trú ngụ độc đáo của hàng ngàn chú dơi tự nhiên.</p>
                 </div>
+            </div>
 
-                <!-- Chùa 2 -->
-                <div class="chua-card">
-                    <img src="https://picsum.photos" alt="Chùa Hoa">
-                    <h3>2. Chùa Ông Bổn (Hòa An Hội Quán)</h3>
-                    <p>Ngôi chùa mang đậm phong cách kiến trúc của người Hoa với những bức tượng điêu khắc tinh xảo và sắc đỏ may mắn.</p>
+            <!-- Chùa 2 -->
+            <div class="chua-card">
+<img src="https://unsplash.com" alt="Chùa Hoa">
+                <div class="chua-content">
+                    <h3>2. Chùa Ông Bổn</h3>
+                    <p>Mang đậm dấu ấn văn hóa kiến trúc phong cách Trung Hoa cổ điển với những bức tượng điêu khắc tinh xảo và sắc đỏ may mắn ngập tràn.</p>
                 </div>
+            </div>
 
-                <!-- Chùa 3 -->
-                <div class="chua-card">
-                    <img src="https://picsum.photos" alt="Chùa Kinh">
+            <!-- Chùa 3 -->
+            <div class="chua-card">
+                <img src="https://unsplash.com" alt="Chùa Kinh">
+                <div class="chua-content">
                     <h3>3. Chùa Đất Sét (Bửu Sơn Tự)</h3>
-                    <p>Ngôi chùa nổi tiếng của người Kinh sở hữu hàng ngàn bức tượng làm hoàn toàn bằng đất sét và những cặp cây nến khổng lồ.</p>
+                    <p>Ngôi chùa linh thiêng mang bản sắc văn hóa người Kinh, nổi danh với hàng ngàn bức tượng tạo tác hoàn toàn bằng đất sét cùng những cặp nến khổng lồ cháy suốt trăm năm.</p>
                 </div>
             </div>
         </div>
