@@ -14,20 +14,20 @@
             margin: 0;
             padding: 0;
             line-height: 1.7;
-            background-color: #f8fafc;
-            color: #1e293b;
+            background-color: #fdfbf7; /* Màu nền kem nhạt thanh tịnh */
+            color: #292524; /* Màu chữ nâu đen trầm ấm */
         }
-        /* Thanh Menu cố định chuẩn hiện đại */
+        /* Thanh Menu cố định màu gỗ trầm và vàng đồng */
         header {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(8px);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(139, 92, 26, 0.08);
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
-            border-bottom: 1px solid #f1f5f9;
+            border-bottom: 2px solid #b45309; /* Đường viền vàng đồng dưới menu */
         }
         nav {
             display: flex;
@@ -39,8 +39,8 @@
         }
         .logo {
             font-weight: 700;
-            font-size: 18px;
-            color: #d97706;
+            font-size: 19px;
+            color: #b45309; /* Màu vàng đồng đậm */
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -49,19 +49,19 @@
             gap: 20px;
         }
         .nav-links a {
-            color: #475569;
+            color: #44403c;
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
             transition: color 0.2s;
         }
         .nav-links a:hover {
-            color: #d97706;
+            color: #b45309;
         }
-        /* Banner chính */
+        /* Banner chính nhuốm màu hoàng hôn cổ kính */
         .banner {
             margin-top: 55px;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://unsplash.com') no-repeat center center/cover;
+            background: linear-gradient(rgba(43, 27, 16, 0.65), rgba(43, 27, 16, 0.65)), url('https://unsplash.com') no-repeat center center/cover;
             height: 450px;
             display: flex;
             flex-direction: column;
@@ -75,31 +75,34 @@
             font-size: 38px;
             font-weight: 800;
             margin-bottom: 15px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+            color: #fef08a; /* Chữ tiêu đề màu vàng nhạt linh thiêng */
         }
         .banner p {
             font-size: 16px;
             max-width: 600px;
-            opacity: 0.9;
+            opacity: 0.95;
+            color: #f5f5f4;
         }
         /* Định dạng các phần nội dung tổng thể */
         section {
-            padding: 90px 20px 40px 20px;
-            max-width: 1100px;
+            padding: 100px 20px 40px 20px;
+max-width: 1100px;
             margin: 0 auto;
         }
         .container {
             background: #ffffff;
             padding: 35px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 15px rgba(68, 64, 60, 0.04);
+            border: 1px solid #f5e0c3; /* Viền màu đồng nhạt */
         }
         .section-title {
             text-align: center;
             margin-bottom: 30px;
-}
+        }
         .section-title h2 {
-            color: #1e293b;
+            color: #78350f; /* Màu nâu đỏ tôn nghiêm */
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 10px;
@@ -107,7 +110,7 @@
         .section-title .divider {
             width: 50px;
             height: 4px;
-            background: #d97706;
+            background: #b45309; /* Đường gạch màu vàng đồng */
             margin: 0 auto;
             border-radius: 2px;
         }
@@ -118,14 +121,17 @@
             gap: 25px;
         }
         .chua-card {
-            background: #f8fafc;
+            background: #fffdfa;
             border-radius: 8px;
             overflow: hidden;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s;
+            border: 1px solid #f3e8ff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .chua-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(120, 53, 15, 0.1);
+            border-color: #b45309;
         }
         .chua-card img {
             width: 100%;
@@ -135,7 +141,39 @@
         .chua-content {
             padding: 20px;
         }
-        /* Biểu mẫu đăng nhập xịn */
+        .chua-content h3 {
+            color: #78350f;
+            margin-top: 0;
+        }
+        .chua-content p {
+            color: #57534e;
+            font-size: 14.5px;
+        }
+        /* Danh sách gạch đầu dòng */
+        ul li strong {
+            color: #a16207;
+        }
+        /* Bố cục khu vực Video */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 20px auto 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            border: 2px solid #b45309;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* Biểu mẫu đăng nhập phong cách trầm ấm */
         .login-form {
             max-width: 400px;
             margin: 0 auto;
@@ -148,16 +186,24 @@
             margin-bottom: 5px;
             font-weight: 600;
             font-size: 14px;
+            color: #57534e;
         }
         .form-group input {
-            width: 100%;
+width: 100%;
             padding: 10px;
-            border: 1px solid #cbd5e1;
+            border: 1px solid #d6d3d1;
             border-radius: 6px;
             box-sizing: border-box;
+            font-size: 15px;
+            background-color: #fffdec;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #b45309;
+            background-color: #ffffff;
         }
         .login-btn {
-            background: #d97706;
+            background: #9a3412; /* Màu đỏ gạch cổ kính */
             color: white;
             border: none;
             padding: 12px;
@@ -166,18 +212,20 @@
             font-weight: 600;
             cursor: pointer;
             font-size: 15px;
+            transition: background 0.2s;
         }
         .login-btn:hover {
-            background: #b45309;
+            background: #7c2d12;
         }
-        /* Footer thông tin trường học */
+        /* Footer màu đỏ nâu gạch cổ kính */
         footer {
-            background: #0f172a;
-            color: #94a3b8;
+            background: #1c1917;
+            color: #d6d3d1;
             text-align: center;
             padding: 30px 20px;
             margin-top: 60px;
             font-size: 14px;
+            border-top: 3px solid #b45309;
         }
     </style>
 </head>
@@ -192,6 +240,7 @@
                 <a href="#gioi-thieu">Giới thiệu</a>
                 <a href="#lich-su">Lịch sử</a>
                 <a href="#kien-truc">Kiến trúc</a>
+                <a href="#video">Video</a>
                 <a href="#tac-gia">Tác giả</a>
                 <a href="#dang-nhap">Đăng nhập</a>
             </div>
@@ -202,7 +251,7 @@
     <section id="trang-chu" style="padding-top: 0; max-width: 100%; padding-left: 0; padding-right: 0;">
         <div class="banner">
             <h1>DI SẢN VĂN HÓA CÁC NGÔI CHÙA SÓC TRĂNG</h1>
-<p>Khám phá nét đẹp văn hóa tâm linh và sự giao thoa đặc sắc của các dân tộc tại mảnh đất Sóc Trăng thân thương.</p>
+            <p>Khám phá nét đẹp văn hóa tâm linh và sự giao thoa đặc sắc của các dân tộc tại mảnh đất Sóc Trăng thân thương.</p>
         </div>
     </section>
 
@@ -224,7 +273,7 @@
                 </div>
 
                 <div class="chua-card">
-                    <img src="https://unsplash.com" alt="Chùa Hoa">
+<img src="https://unsplash.com" alt="Chùa Hoa">
                     <div class="chua-content">
                         <h3>2. Chùa Ông Bổn</h3>
                         <p>Mang đậm dấu ấn văn hóa kiến trúc phong cách Trung Hoa cổ điển với những bức tượng điêu khắc tinh xảo và sắc đỏ may mắn ngập tràn.</p>
@@ -248,32 +297,3 @@
             <div class="section-title">
                 <h2>Lịch Sử Hình Thành</h2>
                 <div class="divider"></div>
-            </div>
-            <p>Các ngôi chùa tại Sóc Trăng có lịch sử kéo dài hàng trăm năm, gắn liền với quá trình khai hoang và lập nghiệp của 3 dân tộc Kinh - Hoa - Khmer. Mỗi ngôi chùa không chỉ là nơi sinh hoạt tâm linh mà còn là chứng nhân lịch sử ghi dấu sự hòa hợp, đoàn kết hữu nghị giữa các cộng đồng dân cư qua nhiều thời kỳ phát triển của vùng đất Nam Bộ.</p>
-        </div>
-    </section>
-
-    <!-- PHẦN 4: KIẾN TRÚC -->
-    <section id="kien-truc">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nét Đẹp Kiến Trúc Độc Đáo</h2>
-                <div class="divider"></div>
-            </div>
-<p>Sự độc đáo trong kiến trúc chùa miếu Sóc Trăng thể hiện rõ qua bàn tay khéo léo của các nghệ nhân:</p>
-            <ul>
-                <li><strong>Chùa Khmer:</strong> Nổi bật với mái cong vút hình đuôi rồng, các tượng thần Krud, Bayon và hoa văn tinh xảo đậm nét Angkor.</li>
-                <li><strong>Chùa Hoa:</strong> Mang kiến trúc lợp ngói âm dương, các cột gỗ sơn son thếp vàng, chạm khắc câu đối chữ Hán và biểu tượng kỳ lân, long phụng.</li>
-                <li><strong>Chùa Kinh:</strong> Thể hiện sự thuần việt mộc mạc, gần gũi với thiên nhiên, các gian thờ bố trí hài hòa trang nghiêm theo Phật giáo Bắc tông.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- PHẦN 5: TÁC GIẢ -->
-    <section id="tac-gia">
-        <div class="container" style="text-align: center;">
-            <div class="section-title">
-                <h2>Thông Tin Tác Giả</h2>
-                <div class="divider"></div>
-            </div>
-            <p style="font-weight: bold; font-size: 18px; color: #0f172a;">Nhóm Học Sinh Thực Hiện Dự Án</p>
